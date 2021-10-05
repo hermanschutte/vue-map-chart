@@ -22,23 +22,6 @@ export const getBaseCss = ({ defaultCountryFillColor, countryStrokeColor, legend
     fill:${defaultCountryFillColor};
     stroke:${countryStrokeColor};
   }
-  .vue-map-legend-header{
-    background:${legendHeaderBackgroundColor}
-  }
-  .vue-map-legend .vue-map-legend-content{
-    background:${legendContentBackgroundColor}
-  }
-  .vue-map-legend-content span{
-    color:${legendFontColorContent}
-  }
-  .vue-map-legend-header span{
-    color:${legendFontColorHeader}
-  }
-.vue-map-legend{
-    border-color: ${legendBorderColor}!important;
-    border-radius:${legendBorderRadius}px;
-    box-shadow: ${legendBoxShadow ? '3px 4px #00000017' : 'none'};
-  }
   `
 );
 
