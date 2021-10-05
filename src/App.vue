@@ -9,7 +9,7 @@
       <div class="vue-map-legend-header">
         <span>{{legend.name}}</span>
       </div>
-      <div class="vue-map-legend-content">
+      <div class="vue-map-legend-content rounded-lg">
         <span>{{countryData[legend.code] || 0}}</span>
       </div>
     </div>
