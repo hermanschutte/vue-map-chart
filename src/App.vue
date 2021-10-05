@@ -6,10 +6,10 @@
       class="vue-map-legend rounded-lg bg-gray-900 border-none"
       :style="'left:' + position.left + 'px; top: ' + position.top + 'px'"
     >
-      <div class="vue-map-legend-header bg-gray-900 text-white text-sm text-center border-none">
+      <div class="vue-map-legend-header bg-gray-900 text-white text-sm text-center border-none rounded-t-lg">
         <span>{{legend.name}}</span>
       </div>
-      <div class="vue-map-legend-content bg-gray-900 text-white font-semibold text-sm border-none">
+      <div class="vue-map-legend-content bg-gray-900 text-white font-semibold text-sm border-none rounded-b-lg">
         <span>Visitors: {{countryData[legend.code] || 0}}</span>
       </div>
     </div>
@@ -151,20 +151,7 @@ export default {
 }
 
 .vue-map-legend {
-  width: 185px;
-  background: #fff;
   overflow: auto;
-  border: 1px solid;
   position: absolute;
-}
-
-.vue-map-legend-header {
-  padding: 10px 15px;
-}
-
-.vue-map-legend-content {
-  padding: 10px 15px;
-  background: #dadbda8f;
-  border-top: 1px solid #acacad;
 }
 </style>
