@@ -2,7 +2,7 @@
   <div class="vue-world-map">
     <Map @hoverCountry="onHoverCountry" @hoverLeaveCountry="onHoverLeaveCountry" />
     <div
-      v-if="legend.name"
+      v-show="legend.name && countryData[legend.code] > 0"
       class="vue-map-legend"
       :style="'left:' + position.left + 'px; top: ' + position.top + 'px'"
     >
