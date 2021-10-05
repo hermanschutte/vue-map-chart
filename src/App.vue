@@ -4,7 +4,7 @@
     <div
       v-show="legend.name && countryData[legend.code] > 0"
       class="vue-map-legend font-sans rounded-lg bg-gray-900 border-none px-4 py-3"
-      :style="'left:' + (position.left - 85) + 'px; top: ' + (position.top - 73) + 'px'"
+      :style="'left:' + (position.left - 88) + 'px; top: ' + (position.top - 80) + 'px'"
     >
       <div class="vue-map-legend-header bg-gray-900 text-white text-sm font-medium text-center border-none rounded-t-lg truncate">
         <span>{{legend.name}}</span>
@@ -155,6 +155,7 @@ export default {
   width: 170px;
   min-height: 68px;
   position: absolute;
+  z-index: 200;
 }
 
 .vue-map-legend:after {
