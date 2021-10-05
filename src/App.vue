@@ -3,13 +3,13 @@
     <Map @hoverCountry="onHoverCountry" @hoverLeaveCountry="onHoverLeaveCountry" />
     <div
       v-show="legend.name && countryData[legend.code] > 0"
-      class="vue-map-legend rounded-lg bg-gray-900 border-none"
+      class="vue-map-legend font-sans rounded-lg bg-gray-900 border-none px-4 py-3"
       :style="'left:' + position.left + 'px; top: ' + position.top + 'px'"
     >
-      <div class="vue-map-legend-header bg-gray-900 text-white text-sm text-center border-none rounded-t-lg">
+      <div class="vue-map-legend-header bg-gray-900 text-white text-sm font-medium text-center border-none rounded-t-lg">
         <span>{{legend.name}}</span>
       </div>
-      <div class="vue-map-legend-content bg-gray-900 text-white font-semibold text-sm border-none rounded-b-lg">
+      <div class="vue-map-legend-content mt-1 bg-gray-900 text-white font-bold text-sm border-none rounded-b-lg">
         <span>Visitors: {{countryData[legend.code] || 0}}</span>
       </div>
     </div>
@@ -153,5 +153,17 @@ export default {
 .vue-map-legend {
   overflow: auto;
   position: absolute;
+}
+
+.vue-map-legend:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #111827;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
 }
 </style>
